@@ -1,0 +1,206 @@
+/* Initial CSS Boilerplate */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* set rem size to 10px */
+	font-size: 62.5%;
+}
+
+body {
+	color: #4b6a9b;
+	font-family: "Space Mono", monospace;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	height: 100vh;
+	background-color: #f2f2f2;
+
+	display: flex;
+	gap: 2.4rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ELEMENT SELECTORS */
+header {
+}
+h1 {
+	color: #222731;
+}
+h2 {
+	color: #2b3442;
+}
+h3 {
+	color: #0079ff;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+}
+nav {
+	position: relative;
+}
+main {
+	background-color: #fefefe;
+	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+	border-radius: 1.5rem;
+
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+
+	padding: 4.4rem 4.8rem 4.8rem 4.8rem;
+}
+em {
+}
+a {
+}
+
+/* CLASS SELECTORS */
+.site-header {
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+}
+.w-73 {
+	width: 73rem;
+}
+.banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.theme-selector {
+	display: flex;
+	gap: 1.6rem;
+	justify-content: center;
+	align-items: center;
+}
+.theme-label {
+	text-transform: uppercase;
+}
+.theme-icon {
+}
+/* consider whether generic icon class could be used */
+.search-icon {
+	position: absolute;
+	width: 2.4rem;
+	height: 2.4rem;
+
+	top: 2.3rem;
+	left: 3.2rem;
+}
+.search-bar {
+	height: 6.9rem;
+	width: 100%;
+	background-color: #fefefe;
+	border: none;
+	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+	border-radius: 1.5rem;
+}
+.search-error-message {
+	position: absolute;
+}
+.search-btn {
+	position: absolute;
+	height: 5rem;
+	width: 10.6rem;
+
+	top: 1rem;
+	right: 1rem;
+
+	background-color: #0079ff;
+	border-radius: 1rem;
+	border: none;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 2.37rem;
+}
+
+input[type="text"] {
+	padding: 0 8rem;
+	color: #4b6a9b;
+	font-family: "Space Mono", monospace;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+}
+
+input::placeholder {
+}
+
+.search-btn:focus,
+.search-btn:active {
+}
+
+.content-column {
+	grid-column: 2 / -1;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.user-header-info {
+	position: relative;
+}
+.user-pfp {
+	position: absolute;
+	top: 5rem;
+	left: -12.5rem;
+}
+.user-info {
+}
+.username {
+}
+.profile-name {
+}
+.profile-link {
+	text-decoration: none;
+}
+.date-joined {
+}
+.user-bio {
+}
+.user-activty {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.2rem 3.2rem 1.7rem;
+}
+.activity-tile {
+}
+.activity-title {
+}
+.activity-metric {
+	font-weight: 700;
+	font-size: 2.2rem;
+	line-height: 3.25rem;
+	color: #2b3442;
+}
+.contact {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 1.7rem;
+}
+.contact-tab {
+	display: flex;
+	align-items: center;
+	gap: 1.9rem;
+}
+.contact-icon {
+}
+.link--contact {
+	text-decoration: none;
+}
+.link--user-location {
+}
+.link--user-twitter-profile {
+}
+.link--user-website {
+}
+.link--user-address {
+}

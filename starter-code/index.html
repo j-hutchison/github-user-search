@@ -1,28 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
 
-  devfinder
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/styles.css" />
 
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
-</body>
+		<title>Frontend Mentor | GitHub user search app</title>
+	</head>
+	<body>
+		<script defer src="./js/script.js"></script>
+		<header class="site-header w-73">
+			<div class="banner">
+				<h1>devfinder</h1>
+				<div class="theme-selector">
+					<span class="theme-label">dark</span>
+					<img
+						class="theme-icon"
+						src="./assets/icon-moon.svg"
+						alt="Moon icon indicating change to dark mode"
+					/>
+				</div>
+			</div>
+			<nav>
+				<img
+					class="search-icon"
+					src="./assets/icon-search.svg"
+					alt="Search icon"
+				/>
+				<input
+					type="text"
+					class="search-bar"
+					name="search-bar"
+					placeholder="Search GitHub username..."
+				/>
+				<span class="search-error-message"></span>
+				<button class="search-btn">Search</button>
+			</nav>
+		</header>
+		<main class="w-73">
+			<div class="content-column">
+				<div class="user-header-info">
+					<img class="user-pfp" src="#" alt="" />
+					<header>
+						<div class="user-info">
+							<h2 class="username">The Octocat</h2>
+							<a class="profile-link" href="#"
+								><h3 class="profile-name">@octocat</h3></a
+							>
+						</div>
+						<span class="user-date-joined">
+							<em class="date-joined"></em>
+						</span>
+					</header>
+				</div>
+				<div class="user-bio">This profile has no bio.</div>
+				<div class="user-activty">
+					<div class="activity-tile">
+						<h4 class="activity-title">Repos</h4>
+						<strong class="activity-metric">8</strong>
+					</div>
+					<div class="activity-tile">
+						<h4 class="activity-title">Followers</h4>
+						<strong class="activity-metric">3938</strong>
+					</div>
+					<div class="activity-tile">
+						<h4 class="activity-title">Followers</h4>
+						<strong class="activity-metric">9</strong>
+					</div>
+				</div>
+				<div class="contact">
+					<div class="contact-tab">
+						<img
+							class="contact-icon"
+							src="./assets/icon-location.svg"
+							alt="image of map placemarker"
+						/>
+						<a class="link--contact link--user-location" href="#"
+							>San Francisco</a
+						>
+					</div>
+					<div class="contact-tab">
+						<img
+							class="contact-icon"
+							src="./assets/icon-twitter.svg"
+							alt="twitter social media icon"
+						/>
+						<a class="link--contact link--user-twitter-profile" href="#"
+							>Not Available</a
+						>
+					</div>
+					<div class="contact-tab">
+						<img
+							class="contact-icon"
+							src="./assets/icon-website.svg"
+							alt="icon showing a chain link to indicate a clickable link"
+						/>
+						<a class="link--contact link--user-website" href="#"
+							>https://github.blog</a
+						>
+					</div>
+					<div class="contact-tab">
+						<img
+							class="contact-icon"
+							src="./assets/icon-company.svg"
+							alt="image of building"
+						/>
+						<a class="link--contact link--user-address" href="#">agithub</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
