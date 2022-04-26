@@ -1,3 +1,14 @@
+:root {
+	--bg-color: #f2f2f2;
+	--txt-default-color: #4b6a9b;
+	--heading-1-color: #222731;
+	--heading-2-color: #2b3442;
+	--heading-3-color: #0079ff;
+	--txt-theme-color: #4b6a9b;
+	--main-bg-color: #fefefe;
+	--user-activity-bg-color: #fefefe;
+}
+
 /* Initial CSS Boilerplate */
 * {
 	margin: 0;
@@ -11,13 +22,13 @@ html {
 }
 
 body {
-	color: #4b6a9b;
+	color: var(--txt-default-color);
 	font-family: "Space Mono", monospace;
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 2.5rem;
 	height: 100vh;
-	background-color: #f2f2f2;
+	background-color: var(--bg-color);
 
 	display: flex;
 	gap: 2.4rem;
@@ -30,13 +41,13 @@ body {
 header {
 }
 h1 {
-	color: #222731;
+	color: var(--heading-1-color);
 }
 h2 {
-	color: #2b3442;
+	color: var(--heading-2-color);
 }
 h3 {
-	color: #0079ff;
+	color: var(--heading-3-color);
 	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 2.4rem;
@@ -45,7 +56,7 @@ nav {
 	position: relative;
 }
 main {
-	background-color: #fefefe;
+	background-color: var(--main-bg-color);
 	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 	border-radius: 1.5rem;
 
@@ -78,11 +89,15 @@ a {
 	gap: 1.6rem;
 	justify-content: center;
 	align-items: center;
+
+	cursor: pointer;
 }
 .theme-label {
+	color: var(--txt-theme-color);
 	text-transform: uppercase;
 }
 .theme-icon {
+	color: var(--txt-theme-color);
 }
 /* consider whether generic icon class could be used */
 .search-icon {
@@ -96,7 +111,7 @@ a {
 .search-bar {
 	height: 6.9rem;
 	width: 100%;
-	background-color: #fefefe;
+	background-color: var(--main-bg-color);
 	border: none;
 	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 	border-radius: 1.5rem;
@@ -119,6 +134,8 @@ a {
 	font-size: 1.6rem;
 	font-weight: 700;
 	line-height: 2.37rem;
+
+	cursor: pointer;
 }
 
 input[type="text"] {
@@ -128,6 +145,10 @@ input[type="text"] {
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 2.5rem;
+}
+
+input[type="text"]:focus {
+	outline: none;
 }
 
 input::placeholder {
@@ -168,17 +189,21 @@ input::placeholder {
 .user-activty {
 	display: flex;
 	justify-content: space-between;
-	padding: 1.2rem 3.2rem 1.7rem;
+	padding: 1.5rem 3.2rem 1.7rem 3.2rem;
+
+	background-color: var(--user-activity-bg-color);
+	border-radius: 1rem;
 }
 .activity-tile {
 }
 .activity-title {
+	color: var(--heading-2-color);
 }
 .activity-metric {
 	font-weight: 700;
 	font-size: 2.2rem;
 	line-height: 3.25rem;
-	color: #2b3442;
+	color: var(--heading-2-color);
 }
 .contact {
 	display: grid;
@@ -192,8 +217,10 @@ input::placeholder {
 	gap: 1.9rem;
 }
 .contact-icon {
+	color: var(--txt-theme-color);
 }
 .link--contact {
+	color: var(--txt-theme-color);
 	text-decoration: none;
 }
 .link--user-location {
@@ -203,4 +230,8 @@ input::placeholder {
 .link--user-website {
 }
 .link--user-address {
+}
+
+.hidden {
+	display: none;
 }
