@@ -23,6 +23,9 @@
 	</head>
 	<body>
 		<script defer src="./js/script.js"></script>
+		<div>
+
+
 		<header class="site-header w-73">
 			<div class="banner">
 				<h1>devfinder</h1>
@@ -71,14 +74,18 @@
 					name="search-bar"
 					placeholder="Search GitHub username..."
 				/>
-				<span class="search-error-message"></span>
+				<span class="search-error-message hidden">No results</span>
 				<button class="search-btn">Search</button>
 			</nav>
 		</header>
 		<main class="w-73">
 			<div class="content-column">
 				<div class="user-header-info">
-					<img class="user-pfp" src="#" alt="" />
+					<img
+						class="user-pfp"
+						src="https://avatars.githubusercontent.com/u/583231?v=4"
+						alt="User Github Profile Image"
+					/>
 					<header>
 						<div class="user-info">
 							<h2 class="username">The Octocat</h2>
@@ -95,15 +102,15 @@
 				<div class="user-activty">
 					<div class="activity-tile">
 						<h4 class="activity-title">Repos</h4>
-						<strong class="activity-metric">8</strong>
+						<strong class="repos activity-metric">8</strong>
 					</div>
 					<div class="activity-tile">
 						<h4 class="activity-title">Followers</h4>
-						<strong class="activity-metric">3938</strong>
+						<strong class="followers activity-metric">3938</strong>
 					</div>
 					<div class="activity-tile">
-						<h4 class="activity-title">Followers</h4>
-						<strong class="activity-metric">9</strong>
+						<h4 class="activity-title">Following</h4>
+						<strong class="following activity-metric">9</strong>
 					</div>
 				</div>
 				<div class="contact">
@@ -119,8 +126,8 @@
 								fill="currentColor"
 							/>
 						</svg>
-						<a class="link--contact link--user-location" href="#"
-							>San Francisco</a
+						<span class="link--contact link--user-location" href="#"
+							>San Francisco</
 						>
 					</div>
 					<div class="contact-tab">
@@ -172,10 +179,11 @@
 								/>
 							</g>
 						</svg>
-						<a class="link--contact link--user-address" href="#">agithub</a>
+						<span class="link--contact link--user-address" href="#">agithub</sp>
 					</div>
 				</div>
 			</div>
 		</main>
+	</div>
 	</body>
 </html>

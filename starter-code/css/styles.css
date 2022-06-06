@@ -27,7 +27,6 @@ body {
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 2.5rem;
-	height: 100vh;
 	background-color: var(--bg-color);
 
 	display: flex;
@@ -35,10 +34,13 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	padding: 2.4rem;
 }
 
 /* ELEMENT SELECTORS */
 header {
+	display: flex;
 }
 h1 {
 	color: var(--heading-1-color);
@@ -65,19 +67,16 @@ main {
 
 	padding: 4.4rem 4.8rem 4.8rem 4.8rem;
 }
-em {
-}
-a {
-}
 
 /* CLASS SELECTORS */
 .site-header {
 	display: flex;
 	flex-direction: column;
 	gap: 3.5rem;
+	margin-bottom: 2.4rem;
 }
 .w-73 {
-	width: 73rem;
+	max-width: 73rem;
 }
 .banner {
 	display: flex;
@@ -99,6 +98,17 @@ a {
 .theme-icon {
 	color: var(--txt-theme-color);
 }
+
+.light:hover > *,
+.light:active > * {
+	color: var(--txt-default-color);
+}
+
+.dark:hover > *,
+.dark:active > * {
+	color: #000;
+}
+
 /* consider whether generic icon class could be used */
 .search-icon {
 	position: absolute;
@@ -115,9 +125,16 @@ a {
 	border: none;
 	box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 	border-radius: 1.5rem;
+	cursor: pointer;
 }
 .search-error-message {
 	position: absolute;
+	display: block;
+	color: #f74656;
+	font-size: 1.5rem;
+	font-weight: 700;
+	top: 2.5rem;
+	right: 15rem;
 }
 .search-btn {
 	position: absolute;
@@ -136,6 +153,12 @@ a {
 	line-height: 2.37rem;
 
 	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.search-btn:hover,
+.search-btn:active {
+	background-color: #60abff;
 }
 
 input[type="text"] {
@@ -151,13 +174,6 @@ input[type="text"]:focus {
 	outline: none;
 }
 
-input::placeholder {
-}
-
-.search-btn:focus,
-.search-btn:active {
-}
-
 .content-column {
 	grid-column: 2 / -1;
 
@@ -165,34 +181,38 @@ input::placeholder {
 	flex-direction: column;
 	gap: 2rem;
 }
+.user-info {
+	margin-right: auto;
+}
 .user-header-info {
 	position: relative;
 }
 .user-pfp {
 	position: absolute;
-	top: 5rem;
-	left: -12.5rem;
-}
-.user-info {
-}
-.username {
-}
-.profile-name {
+	top: 0rem;
+	left: -14rem;
+
+	width: 11rem;
+	height: 11rem;
+	border-radius: 50%;
 }
 .profile-link {
 	text-decoration: none;
 }
-.date-joined {
-}
-.user-bio {
-}
 .user-activty {
 	display: flex;
+	gap: 9rem;
 	justify-content: space-between;
 	padding: 1.5rem 3.2rem 1.7rem 3.2rem;
 
 	background-color: var(--user-activity-bg-color);
 	border-radius: 1rem;
+}
+.user-bio {
+	color: var(--txt-theme-color);
+}
+.user-date-joined {
+	color: var(--txt-theme-color);
 }
 .activity-tile {
 }
@@ -207,13 +227,13 @@ input::placeholder {
 }
 .contact {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	gap: 1.7rem;
 }
 .contact-tab {
-	display: flex;
-	align-items: center;
+	/* display: flex;
+	align-items: center; */
+	display: block;
 	gap: 1.9rem;
 }
 .contact-icon {
@@ -223,15 +243,46 @@ input::placeholder {
 	color: var(--txt-theme-color);
 	text-decoration: none;
 }
-.link--user-location {
+
+a.link--contact:link,
+a.link--contact:visited {
+	color: var(--txt-theme-color);
+	text-decoration: none;
 }
-.link--user-twitter-profile {
-}
-.link--user-website {
-}
-.link--user-address {
+
+a.link--contact:hover,
+a.link--contact:active {
+	text-decoration: underline;
 }
 
 .hidden {
 	display: none;
+}
+
+@media screen and (max-width: 51em) {
+	.content-column {
+		grid-column: 1/-1;
+	}
+
+	header {
+		display: unset;
+	}
+
+	.contact {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-tab {
+	}
+
+	.user-header-info {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.user-pfp {
+		position: relative;
+		top: 0rem;
+		left: 0rem;
+	}
 }
